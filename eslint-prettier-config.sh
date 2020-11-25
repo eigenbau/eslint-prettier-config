@@ -82,23 +82,23 @@ echo
 echo -e "${GREEN}Configuring your development environment... ${NC}"
 
 echo
-echo -e "1/4 ${LCYAN}ESLint & Prettier Installation... ${NC}"
+echo -e "1/5 ${LCYAN}ESLint & Prettier Installation... ${NC}"
 echo
 $pkg_cmd -D eslint prettier
 
 echo
-echo -e "3/4 ${LCYAN}Making ESlint and Prettier play nice with each other... ${NC}"
+echo -e "2/5 ${LCYAN}Making ESlint and Prettier play nice with each other... ${NC}"
 echo "See https://github.com/prettier/eslint-config-prettier for more details."
 echo
 $pkg_cmd -D eslint-config-prettier eslint-plugin-prettier
 
 echo
-echo -e "3/4 ${LCYAN}Making ESlint play nice with node.js... ${NC}"
+echo -e "3/5 ${LCYAN}Making ESlint play nice with node.js... ${NC}"
 echo
 $pkg_cmd -D eslint-config-node eslint-plugin-node
 ]
 echo
-echo -e "3/4 ${LCYAN}Getting AirBnB base config... ${NC}"
+echo -e "4/5 ${LCYAN}Getting AirBnB base config... ${NC}"
 echo
 npx install-peerdeps --dev eslint-config-airbnb-base
 
@@ -106,7 +106,7 @@ if [ "$skip_eslint_setup" == "true" ]; then
   break
 else
   echo
-  echo -e "4/4 ${YELLOW}Building your .eslintrc${config_extension} file...${NC}"
+  echo -e "5/5 ${YELLOW}Building your .eslintrc${config_extension} file...${NC}"
   > ".eslintrc${config_extension}" # truncates existing file (or creates empty)
 
   echo ${config_opening}'
