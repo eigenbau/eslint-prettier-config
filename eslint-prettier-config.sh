@@ -30,9 +30,9 @@ echo -e "${LCYAN}Making ESlint and Prettier play nice with each other... ${NC}"
 echo
 npm install --save-dev eslint-config-prettier eslint-plugin-prettier
 
-echo "${LCYAN}Remember to include the below specs in your .eslinrc file:${NC}"
+echo -e "${LCYAN}Remember to include the below specs in your .eslinrc file:${NC}"
 echo
-echo ${RED}'
+echo -e ${RED}'
 "extends": [ "prettier"],
 "plugins": [ "prettier"],
 "rules": {
