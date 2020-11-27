@@ -33,20 +33,19 @@ npm install --save-dev eslint-config-prettier eslint-plugin-prettier
 echo
 echo -e "${LCYAN}Remember to include the below specs in your .eslinrc file: ${NC}"
 echo
-echo -e ${RED}'
-"extends": [ "prettier"],
-"plugins": [ "prettier"],
-"rules": {
-"prettier/prettier": [
-    "error",
-    {
-    "singleQuote": true,
-    "printWidth": 100
-    }
-],
-"no-console": "off"
-}'
-${NC}
+echo -e '${RED}
+    "extends": [ "prettier"],
+    "plugins": [ "prettier"],
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+            "singleQuote": true,
+            "printWidth": 100
+            }
+        ],
+        "no-console": "off"
+    }${NC}'
 
 echo
 echo -e "${GREEN}Finished setting up!${NC}"
