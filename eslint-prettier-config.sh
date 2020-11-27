@@ -18,7 +18,7 @@ echo -e "${GREEN}Configuring your development environment... ${NC}"
 echo
 echo -e "${LCYAN}ESLint Installation... ${NC}"
 echo
-npm -D eslint
+npm install --save-dev eslint
 
 echo
 echo -e "${LCYAN}Initialize ESlint... ${NC}"
@@ -28,23 +28,24 @@ npx eslint --init
 echo
 echo -e "${LCYAN}Making ESlint and Prettier play nice with each other... ${NC}"
 echo
-$pkg_cmd -D eslint-config-prettier eslint-plugin-prettier
+npm install --save-dev eslint-config-prettier eslint-plugin-prettier
 
-
-echo '
-  "extends": [ "prettier"],
-  "plugins": [ "prettier"],
-  "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": true,
-        "printWidth": 100
-      }
-    ],
-    "no-console": "off"
-  }
-'
+echo "${LCYAN}Remember to include the below specs in your .eslinrc file:${NC}"
+echo
+echo ${RED}'
+"extends": [ "prettier"],
+"plugins": [ "prettier"],
+"rules": {
+"prettier/prettier": [
+    "error",
+    {
+    "singleQuote": true,
+    "printWidth": 100
+    }
+],
+"no-console": "off"
+}'
+${NC}
 
 echo
 echo -e "${GREEN}Finished setting up!${NC}"
