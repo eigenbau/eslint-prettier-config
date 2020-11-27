@@ -40,7 +40,8 @@ echo -e '
             "error",
             {
             "singleQuote": true,
-            "printWidth": 100
+            "printWidth": 100,
+            "tabWidth": 4
             }
         ],
         "no-console": "off"
