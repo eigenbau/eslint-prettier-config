@@ -96,11 +96,6 @@ echo
 echo -e "3/5 ${LCYAN}Making ESlint play nice with node.js... ${NC}"
 echo
 $pkg_cmd -D eslint-config-node eslint-plugin-node
-]
-echo
-echo -e "4/5 ${LCYAN}Getting AirBnB base config... ${NC}"
-echo
-npx install-peerdeps --dev eslint-config-airbnb-base
 
 if [ "$skip_eslint_setup" == "true" ]; then
   break
@@ -110,7 +105,7 @@ else
   > ".eslintrc${config_extension}" # truncates existing file (or creates empty)
 
   echo ${config_opening}'
-  "extends": [ "airbnb", "prettier", "plugin:node/recommended"],
+  "extends": [ "prettier", "plugin:node/recommended"],
   "plugins": [ "prettier"],
   "rules": {
     "prettier/prettier": [
