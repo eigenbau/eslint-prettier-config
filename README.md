@@ -1,1 +1,1 @@
-# eslint-prettier-node
+# eslint-prettier-config
