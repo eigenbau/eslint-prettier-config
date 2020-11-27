@@ -31,9 +31,8 @@ echo
 npm install --save-dev eslint-config-prettier eslint-plugin-prettier
 
 echo
-echo -e "${LCYAN}Remember to include the below specs in your .eslinrc file: ${NC}"
-echo
-echo -e '${RED}
+echo -e "${YELLOW}"
+echo -e '
     "extends": [ "prettier"],
     "plugins": [ "prettier"],
     "rules": {
@@ -45,12 +44,8 @@ echo -e '${RED}
             }
         ],
         "no-console": "off"
-    }${NC}'
-
+    }'
+echo -e "${NC}"
 echo
-echo -e "${GREEN}Finished setting up!${NC}"
+echo -e "${GREEN}Remember to include the above specs in your .eslinrc file!${NC}"
 echo
-
-#
-# Add vscode config and/or prettier config to format on save
-#
